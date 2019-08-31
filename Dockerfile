@@ -13,6 +13,7 @@ RUN chmod +x /bin/wp-cli.phar
 
 # Add Composer 
 RUN cd /bin/ && curl -sS  https://getcomposer.org/installer | php
+RUN chmod +x /bin/composer.phar && php /bin/composer.phar self-update
 COPY composer-su.sh /bin/composer
-RUN chmod +x /bin/composer.phar
+
 
